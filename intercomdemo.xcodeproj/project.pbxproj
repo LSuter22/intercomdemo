@@ -13,6 +13,11 @@
 		5F7B15B82BE292680008B6C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7B15B62BE292680008B6C0 /* Main.storyboard */; };
 		5F7B15BA2BE292690008B6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F7B15B92BE292690008B6C0 /* Assets.xcassets */; };
 		5F7B15BD2BE292690008B6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F7B15BB2BE292690008B6C0 /* LaunchScreen.storyboard */; };
+		5F7B15C62BE293470008B6C0 /* WebRTC in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B15C52BE293470008B6C0 /* WebRTC */; };
+		5F7B15C92BE293ED0008B6C0 /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B15C82BE293ED0008B6C0 /* SignalRClient */; };
+		5F7B15CB2BE3CD150008B6C0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B15CA2BE3CD150008B6C0 /* API.swift */; };
+		5F7B15CD2BE3CE320008B6C0 /* API Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B15CC2BE3CE320008B6C0 /* API Models.swift */; };
+		5F7B15CF2BE4E8B90008B6C0 /* HubConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B15CE2BE4E8B90008B6C0 /* HubConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		5F7B15B92BE292690008B6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F7B15BC2BE292690008B6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F7B15BE2BE292690008B6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F7B15CA2BE3CD150008B6C0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5F7B15CC2BE3CE320008B6C0 /* API Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Models.swift"; sourceTree = "<group>"; };
+		5F7B15CE2BE4E8B90008B6C0 /* HubConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7B15C92BE293ED0008B6C0 /* SignalRClient in Frameworks */,
+				5F7B15C62BE293470008B6C0 /* WebRTC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,9 @@
 				5F7B15B02BE292680008B6C0 /* AppDelegate.swift */,
 				5F7B15B22BE292680008B6C0 /* SceneDelegate.swift */,
 				5F7B15B42BE292680008B6C0 /* ViewController.swift */,
+				5F7B15CA2BE3CD150008B6C0 /* API.swift */,
+				5F7B15CC2BE3CE320008B6C0 /* API Models.swift */,
+				5F7B15CE2BE4E8B90008B6C0 /* HubConnection.swift */,
 				5F7B15B62BE292680008B6C0 /* Main.storyboard */,
 				5F7B15B92BE292690008B6C0 /* Assets.xcassets */,
 				5F7B15BB2BE292690008B6C0 /* LaunchScreen.storyboard */,
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = intercomdemo;
+			packageProductDependencies = (
+				5F7B15C52BE293470008B6C0 /* WebRTC */,
+				5F7B15C82BE293ED0008B6C0 /* SignalRClient */,
+			);
 			productName = intercomdemo;
 			productReference = 5F7B15AD2BE292680008B6C0 /* intercomdemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 5F7B15A42BE292680008B6C0;
+			packageReferences = (
+				5F7B15C42BE293470008B6C0 /* XCRemoteSwiftPackageReference "WebRTC" */,
+				5F7B15C72BE293ED0008B6C0 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+			);
 			productRefGroup = 5F7B15AE2BE292680008B6C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +161,9 @@
 			files = (
 				5F7B15B52BE292680008B6C0 /* ViewController.swift in Sources */,
 				5F7B15B12BE292680008B6C0 /* AppDelegate.swift in Sources */,
+				5F7B15CF2BE4E8B90008B6C0 /* HubConnection.swift in Sources */,
+				5F7B15CD2BE3CE320008B6C0 /* API Models.swift in Sources */,
+				5F7B15CB2BE3CD150008B6C0 /* API.swift in Sources */,
 				5F7B15B32BE292680008B6C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +387,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F7B15C42BE293470008B6C0 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 124.0.0;
+			};
+		};
+		5F7B15C72BE293ED0008B6C0 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moozzyk/SignalR-Client-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F7B15C52BE293470008B6C0 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F7B15C42BE293470008B6C0 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+		5F7B15C82BE293ED0008B6C0 /* SignalRClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F7B15C72BE293ED0008B6C0 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
+			productName = SignalRClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F7B15A52BE292680008B6C0 /* Project object */;
 }
